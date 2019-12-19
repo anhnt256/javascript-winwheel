@@ -2166,7 +2166,7 @@ function winwheelAnimationLoop()
             if (typeof callbackBefore === 'function') {
                 callbackBefore();
             } else {
-                eval(callbackBefore);
+                eval(callbackBefore());
             }
         }
 
@@ -2179,7 +2179,7 @@ function winwheelAnimationLoop()
             if (typeof callbackAfter === 'function') {
                 callbackAfter();
             } else {
-                eval(callbackAfter);
+                eval(callbackAfter());
             }
         }
 
@@ -2247,7 +2247,7 @@ function winwheelStopAnimation(canCallback)
                 // Pass back the indicated segment as 99% of the time you will want to know this to inform the user of their prize.
                 callback(winwheelToDrawDuringAnimation.getIndicatedSegment());
             } else {
-                eval(callback);
+                eval(callback());
             }
         }
     }
